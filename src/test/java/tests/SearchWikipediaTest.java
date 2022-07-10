@@ -27,6 +27,7 @@ public class SearchWikipediaTest extends TestBase {
 
         step("Go to article", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).click();
+            $(AppiumBy.className("android.view.View")).click();
             $(AppiumBy.className("android.widget.TextView")).shouldHave(text("Portugal"));
         });
     }
